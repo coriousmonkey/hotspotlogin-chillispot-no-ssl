@@ -1,24 +1,16 @@
 # hotspotlogin-chillispot-no-ssl
-hotspotlogin for chillispot without using ssl
-
-place hotspotlogin.php & js folder in /var/www/
-
-edit /etc/chilli.conf
-with "uamserver http://192.168.182.1/hotspotlogin.php"
+<br>
+hotspotlogin for chillispot without using ssl<br>
+place hotspotlogin.php & js folder in /var/www/<br><br>
+edit /etc/chilli.conf<br>
+with "uamserver http://192.168.182.1/hotspotlogin.php"<br>
 it's default setting when you're using easyhotspot always careful with this configuration
 
-$uamsecret = "easyhotpot";
-
-$loginpath = "/hotspotlogin.php";
-
-$hostname="localhost"; //mysql hostname
-
-$sql_user="easyhotspot"; //mysql user
-
-$sql_pass="easyhotspot"; //mysql password
-
-$sql_dbname="easyhotspot_opensource"; //database which storage user and password
-
-$user_tabel="postpaid_account"; //tabel user
-
+$uamsecret = "easyhotpot";<br>
+$loginpath = "/hotspotlogin.php";<br>
+$hostname="localhost"; //mysql hostname<br>
+$sql_user="easyhotspot"; //mysql user<br>
+$sql_pass="easyhotspot"; //mysql password<br>
+$sql_dbname="easyhotspot_opensource"; //database which storage user and password<br>
+$user_tabel="postpaid_account"; //tabel user<br>
 $user_tb_col="username"; //username column name
