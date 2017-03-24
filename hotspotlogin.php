@@ -8,7 +8,7 @@
 # Shared secret used to encrypt challenge with. Prevents dictionary attacks.
 # You should change this to your own shared secret.
 
-$uamsecret = "lemelepese";
+$uamsecret ="easyhotspot";
 
 # Uncomment the following line if you want to use ordinary user-password
 # for radius authentication. Must be used together with $uamsecret.
@@ -74,7 +74,7 @@ if (!$link) {
     die('Not connected : ' . mysql_error());
 }
 
-// make foo the current dbServer: localhost »Database: easyhotspot_opensource
+// make foo the current dbServer: localhost Â»Database: easyhotspot_opensource
 $db_selected = mysql_select_db($sql_dbname, $link);
 if (!$db_selected) {
     die ('Can\'t use foo : ' . mysql_error());
