@@ -17,6 +17,13 @@ $uamsecret = "lemelepese";
 
 $loginpath = "/hotspotlogin.php";
 
+$hostname="localhost"; //mysql hostname
+$sql_user="easyhotspot"; //mysql user
+$sql_pass="easyhotspot"; //mysql password
+$sql_dbname="easyhotspot_opensource"; //database which storage user and password
+$user_tabel="postpaid_account"; //tabel user
+$user_tb_col="username"; //username column name
+
 # possible Cases:       
 # attempt to login                          login=login
 # 1: Login successful                       res=success
@@ -62,20 +69,20 @@ $footer_textz  = '';
 
 //you can Change with your database and host
 //$link = mysql_connect('hostname', 'username', 'password');
-$link = mysql_connect('localhost', 'easyhotspot', 'easyhotspot');
+$link = mysql_connect($hostname, $sql_user, $sql_pass);
 if (!$link) {
     die('Not connected : ' . mysql_error());
 }
 
 // make foo the current dbServer: localhost »Database: easyhotspot_opensource
-$db_selected = mysql_select_db('easyhotspot_opensource', $link);
+$db_selected = mysql_select_db($sql_dbname, $link);
 if (!$db_selected) {
     die ('Can\'t use foo : ' . mysql_error());
 }
 
 $data=mysql_query("SELECT *
-FROM `postpaid_account`
-WHERE username LIKE '".$_GET['UserName']."'");
+FROM ".$user_tabel."
+WHERE ".$user_tb_col." LIKE '".$_GET['UserName']."'");
 $hasil=mysql_fetch_assoc($data);
 
 if ($_GET['login'] == login) {
