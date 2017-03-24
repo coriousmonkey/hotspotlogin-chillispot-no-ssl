@@ -5,7 +5,7 @@ place hotspotlogin.php & js folder in /var/www/<br><br>
 edit /etc/chilli.conf<br>
 with "uamserver http://192.168.182.1/hotspotlogin.php"<br><br><br><br>
 
-it's default setting when you're using easyhotspot always careful with this configuration
+Remember.it's using default setting when you're using easyhotspot always careful with this configuration
 <br><br>
 $uamsecret = "easyhotpot";<br>
 $loginpath = "/hotspotlogin.php";<br>
